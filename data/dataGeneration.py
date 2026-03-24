@@ -6,7 +6,7 @@ data = []
 num_students = 2000
 
 for student_id in range(num_students):
-    num_subjects = random.randint(3,4)
+    num_subjects = random.randint(2,10)
     available_hours_total = random.randint(3,8)
     ability = random.uniform(0.4, 1.0)
     subjects = []
@@ -57,6 +57,7 @@ for student_id in range(num_students):
             subject["days_until_exam"],
             subject["topics_remaining"],
             available_hours_total,
+            round(subject["weight"], 4),
             recommended_hours
         ])
 
@@ -69,6 +70,7 @@ columns = [
     "days_until_exam",
     "topics_remaining",
     "available_hours_total",
+    "priority_weight",
     "recommended_hours"
 ]
 
